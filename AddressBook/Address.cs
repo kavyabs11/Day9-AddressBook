@@ -11,29 +11,30 @@ namespace AddressBook
         List<Contact> add_book = new List<Contact>();          //created an address book list of Contacts class type
         public void create()
         {
-            Contact contacts = new Contact();                    //created an object of the Contacts class and added Contacts details
+            Contact contact = new Contact();                    //created an object of the Contacts class and added Contacts details
             Console.WriteLine("Enter your first name");
-            contacts.first_name = Console.ReadLine();
+            contact.first_name = Console.ReadLine();
             Console.WriteLine("Enter your second name");
-            contacts.s_name = Console.ReadLine();
+            contact.s_name = Console.ReadLine();
             Console.WriteLine("Enter your address");
-            contacts.address = Console.ReadLine();
+            contact.address = Console.ReadLine();
             Console.WriteLine("Enter your city");
-            contacts.city = Console.ReadLine();
+            contact.city = Console.ReadLine();
             Console.WriteLine("Enter your state");
-            contacts.state = Console.ReadLine();
+            contact.state = Console.ReadLine();
             Console.WriteLine("Enter your zip code");
-            contacts.zip = Convert.ToInt64(Console.ReadLine());
+            contact.zip = Convert.ToInt64(Console.ReadLine());
             Console.WriteLine("Enter your phone number");
-            contacts.phone_no = Convert.ToInt64(Console.ReadLine());
+            contact.phone_no = Convert.ToInt64(Console.ReadLine());
             Console.WriteLine("Enter your email");
-            contacts.email = Console.ReadLine();
-            add_book.Add(contacts);
+            contact.email = Console.ReadLine();
+            add_book.Add(contact);
         }
         public void display()               //displaying details of each conatact
         {
             foreach (var data in add_book)
             {
+                Console.WriteLine("Contacts stored_________");
                 Console.WriteLine($"Contacts No. - {data}");
                 Console.WriteLine($"Name - {data.first_name} {data.s_name}");
                 Console.WriteLine($"Address - {data.address}");
@@ -41,9 +42,8 @@ namespace AddressBook
                 Console.WriteLine($"State - {data.state}");
                 Console.WriteLine($"Zip - {data.zip}");
                 Console.WriteLine($"Phone no. - {data.phone_no}");
-                Console.WriteLine($"Email - {data.email}");
+                Console.WriteLine($"Email - {data.email}\n");
             }
         }
     }
 }
-   
